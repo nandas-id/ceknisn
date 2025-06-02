@@ -143,10 +143,6 @@
                         <p class="text-xs text-gray-500">NISN</p>
                         <p id="result-nisn" class="font-medium text-gray-800">-</p>
                     </div>
-                    <div>
-                        <p class="text-xs text-gray-500">NIK</p>
-                        <p id="result-nik" class="font-medium text-gray-800">-</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -172,7 +168,6 @@
         const resultDiv = document.getElementById('result');
         const resultName = document.getElementById('result-name');
         const resultNisn = document.getElementById('result-nisn');
-        const resultNik = document.getElementById('result-nik');
         const errorMessage = document.getElementById('error-message');
 
         // Hanya memperbolehkan input angka
@@ -204,11 +199,9 @@
             if (student) {
                 resultName.textContent = student.nama;
                 resultNisn.textContent = student.nisn;
-            //    resultNik.textContent = student.nik;
             } else {
                 resultName.textContent = "Data tidak ditemukan";
                 resultNisn.textContent = "-";
-                resultNik.textContent = nik;
             }
             
             resultDiv.classList.remove('hidden');
